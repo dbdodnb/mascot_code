@@ -44,10 +44,27 @@ $brown: #6C4320
 $orange: #F99605
 $light-yellow: #FAF4D1
 $white: #FFFFFF
+$dark-orange: #CE7B02
 
 /* general */
 .padding
     padding: 0 100px
+  
+.text
+  font-family: $font
+  font-size: 24px
+
+.text_underline
+  text-decoration: underline
+
+.section__heading
+  color: $green
+  font-size: 64px
+  font-family: $font
+
+html
+  scroll-behavior: smooth
+  scroll-padding-top: 50px
 
 /* header */
 .header
@@ -57,12 +74,14 @@ $white: #FFFFFF
     flex-wrap: wrap
     box-sizing: border-box
     background-color: $green
+    color: $white
     .nav
         width: 100%
         height: 100px
         margin-top: 20px
-        display: grid
-        grid-template-columns: 100px 1fr
+        display: flex
+        justify-content: space-between
+        align-items: center
         .nav__logo
             width: 100px
             height: 100px
@@ -72,6 +91,7 @@ $white: #FFFFFF
             background-repeat: no-repeat
         .nav__info
             display: flex
+            height: 100px
             align-items: center
             ul
                 width: 100%
@@ -81,19 +101,163 @@ $white: #FFFFFF
                 li
                     font-family: $font
                     margin-left: 50px
-                        
+                    display: flex
+                    justify-content: center
+                    align-items: center
                     a
                         color: $white
                         text-decoration: none
-                        &:hover
-                            color: $light-yellow
-                            background-color: $light-green
-                            transition: .5s
-                            padding: 15px
-                            border-radius: 25px
+                        font-size: 24px
                         
     .header__info
         width: 100%
         height: calc( 100vh - 120px )
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .header__text
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          width: 50%
+          height: 80%
+          .heading
+            color: $white
+            font-size: 90px
+            font-family: $font
+    .header__slider
+      width: 45%
+      height: 80%
+      display: flex
+      justify-content: flex-end
+      align-items: center
 
+.nav__button
+  display: block
+  width: 170px
+  height: 65px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $orange
+  border-radius: 25px
+  box-shadow: inset -4px -2px 6px rgba(0, 0, 0, 0.25)
+  &:hover
+    transition: .5s
+    width: 170px
+    height: 60px
+    box-shadow: inset 4px 2px 6px rgba(0, 0, 0, 0.25)
+    color: $white
+    background-color: $orange
+    padding: 0px
+    font-size: 1.2em
+    background-color: $dark-orange
+    
+.nav__link:hover
+  padding: 15px
+  background-color: $light-green
+  color: $light-yellow
+  transition: .5s
+  border-radius: 25px
+
+.swiper
+  width: 400px
+  height: 550px
+
+.swiper-slide
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 25px
+  box-sizing: border-box
+  font-size: 22px
+  font-weight: bold
+  color: #fff
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+  &:nth-child(1n)
+    background-image: url(../public/img/header/7.jpg)
+    
+
+  &:nth-child(2n)
+    background-image: url(../public/img/header/1.jpg)
+
+  &:nth-child(3n)
+    background-image: url(../public/img/header/2.jpg)
+
+
+  &:nth-child(4n)
+    background-image: url(../public/img/header/3.jpg)
+
+
+  &:nth-child(5n)
+    background-image: url(../public/img/header/4.jpg)
+
+
+  &:nth-child(6n)
+    background-image: url(../public/img/header/5.jpg)
+
+  &:nth-child(7n)
+    background-image: url(../public/img/header/6.jpg)
+
+
+  &:nth-child(8n)
+    background-image: url(../public/img/header/8.jpg)
+
+
+  &:nth-child(9n)
+    background-image: url(../public/img/header/9.jpg)
+
+
+  &:nth-child(10n)
+    background-image: url(../public/img/header/10.jpg)
+
+
+
+  /* MASCOT is all*/
+.scrollingText
+  width: 100%
+  height: 70px
+  background-color: $light-yellow
+  display: flex
+  align-items: center
+  font-size: 35px
+  letter-spacing: 15px
+  font-family: $font
+
+  .marquee
+    margin: 0 auto
+    white-space: nowrap
+    overflow: hidden
+    display: flex
+    gap: 1rem // Optional space between repeated spans
+
+    span
+      display: inline-block
+      animation: marquee 170s linear infinite
+
+@keyframes marquee
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-100%)
+
+
+/* about */
+.about
+  width: 100%
+  margin-top: 50px
+  display: flex
+  justify-content: space-between
+  .about__text
+    width: 50%
+    .text
+      margin-top: 50px
+  .about__cards
+    width: 45%
+    display: grid
+    grid-template-rows: 250px 250px
+    grid-template-columns: 50% 50%
 
