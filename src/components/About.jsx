@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 function About() {
+
+    useEffect(() => {
+        Aos.init({
+          once: true,
+        });
+        Aos.refresh();
+      }, []);
+
     return(
         <div className="padding">
-            <div id="about" className="about">
+            <div data-aos="fade-up" id="about" className="about">
                 <div className="about__text">
                     <p className="section__heading">About us</p>
                     <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

@@ -307,14 +307,82 @@ html {
   justify-content: space-around;
 }
 .values .values__container div {
-  width: 30%;
-  height: 360px;
-  margin-top: 30px;
+  width: 27%;
+  height: 350px;
+  margin-top: 50px;
   border-radius: 25px;
   border: 2px solid #6C4320;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.5s;
+  padding: 30px;
 }
-.values .values__container div img {
-  width: 200px;
-  height: 200px;
+.values .values__container div .values__info {
+  text-align: center;
+  display: none;
+}
+
+/* participants */
+.participants {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.participants .swiper {
+  width: 30%;
+  height: 300px;
+  margin: 0;
+}
+.participants .swiper .swiper-slide {
+  border-radius: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.participants .participants__info {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.participants .participants__info .participants__bullet {
+  width: 43%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.participants .participants__info .participants__bullet:nth-child(2n) {
+  margin-left: 30px;
+}
+.participants .participants__info .participants__bullet:nth-child(3n) {
+  margin-left: 50px;
+}
+.participants .participants__info .participants__bullet:nth-child(4n) {
+  margin-left: 30px;
+}
+.participants .participants__info .participants__bullet div {
+  width: 80px;
+  height: 80px;
+  background-color: #FAF4D1;
+  border-radius: 50%;
+}
+.participants .participants__info .participants__bullet .text {
+  display: inline-block;
+  width: calc(100% - 90px);
+}
+
+/* accomodations */
+.padding_accomodations {
+  background-color: #114917;
+}
+
+.accomodations {
+  margin-top: 50px;
+  color: #FFFFFF;
 }/*# sourceMappingURL=App.css.map */
