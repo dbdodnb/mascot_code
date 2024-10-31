@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import MASCOT from './components/MASCOT';
 import About from './components/About';
+import Values from './components/Values';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <MASCOT />
       <About />
+      <Values />
     </>
   );
 }

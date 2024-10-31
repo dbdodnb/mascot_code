@@ -260,14 +260,61 @@ html {
   justify-content: space-between;
 }
 .about .about__text {
-  width: 50%;
+  width: 45%;
 }
 .about .about__text .text {
   margin-top: 50px;
 }
 .about .about__cards {
-  width: 45%;
+  width: 50%;
   display: grid;
   grid-template-rows: 250px 250px;
   grid-template-columns: 50% 50%;
+  grid-row-gap: 20px;
+}
+.about .about__cards .about__element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.about .about__cards .about__element div {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background-color: #73AF0E;
+}
+.about .about__cards .about__element a {
+  color: #000;
+}
+
+/* values */
+.values {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.values .section__heading_center {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.values .values__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.values .values__container div {
+  width: 30%;
+  height: 360px;
+  margin-top: 30px;
+  border-radius: 25px;
+  border: 2px solid #6C4320;
+  box-sizing: border-box;
+}
+.values .values__container div img {
+  width: 200px;
+  height: 200px;
 }/*# sourceMappingURL=App.css.map */

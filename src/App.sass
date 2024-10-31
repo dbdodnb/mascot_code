@@ -252,12 +252,50 @@ html
   display: flex
   justify-content: space-between
   .about__text
-    width: 50%
+    width: 45%
     .text
       margin-top: 50px
   .about__cards
-    width: 45%
+    width: 50%
     display: grid
     grid-template-rows: 250px 250px
     grid-template-columns: 50% 50%
+    grid-row-gap: 20px
+    .about__element
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      div
+        width: 165px
+        height: 165px
+        border-radius: 50%
+        background-color: $light-green
+      a
+        color: #000
 
+/* values */
+.values
+  margin-top: 50px
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  .section__heading_center
+    text-align: center
+    width: 100%
+    display: inline-block
+  .values__container
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    div
+      width: 30%
+      height: 360px
+      margin-top: 30px
+      border-radius: 25px
+      border: 2px solid $brown
+      box-sizing: border-box
+      img
+        width: 200px
+        height: 200px
