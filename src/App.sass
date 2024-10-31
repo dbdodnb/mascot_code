@@ -355,5 +355,67 @@ html
 .accomodations
   margin-top: 50px
   color: $white
-  
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding-bottom: 50px
+  .accomodations__bullets
+    width: 40%
+    margin-top: 50px
+    div
+      width: 100%
+      display: flex
+      margin-top: 30px
+      &:first-child
+        margin-top: 0
+      .bullet
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: $light-green
+      .text
+        width: calc( 100% - 80px )
+        margin-left: -40px
+        margin-top: 30px
+  .accomodations__photo
+    width: 50%
+    height: 400px
+    background-image: url(../public/img/placeholder.png)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    display: flex
+    align-self: center
+    margin-top: 50px
+    
+/* team */
+.team
+  margin-top: 50px
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  .team__info
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    margin-top: 50px
+    .team__slides
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      .team__photo
+        width: 80%
+        padding-bottom: 80%
+        border-radius: 50%
+        background-image: url(../public/img/placeholder.png)
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        border: 3px solid $brown
+        box-sizing: border-box
+      .text
+        margin-top: 30px
+
       

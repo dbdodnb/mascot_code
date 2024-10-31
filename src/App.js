@@ -6,6 +6,7 @@ import About from './components/About';
 import Values from './components/Values';
 import Participants from './components/Participants';
 import Accomodations from './components/Accomodations';
+import Team from './components/Team';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Values />
       <Participants />
       <Accomodations />
+      <Team />
     </>
   );
 }
