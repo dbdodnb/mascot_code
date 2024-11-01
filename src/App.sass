@@ -418,4 +418,116 @@ html
       .text
         margin-top: 30px
 
+/* feedback */
+.feedback
+  margin-top: 50px
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  .swiper
+    width: 100%
+    margin-top: 50px
+    height: auto
+    .swiper-button-prev
+      &:nth-child(1n)
+        display: none
+    .swiper-button-next
+      color: $light-green
+      font-weight: bold
+      display: none
+    .swiper-slide
+      width: 80%
+      background: none
       
+.feedback
+  text-align: center
+
+.slide-content
+  background: #fff
+  padding: 20px
+  border-radius: 10px
+  text-align: left
+  font-family: $font
+  margin-bottom: 30px
+
+.profile
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 10px
+  color: #000
+  font-weight: normal
+
+.profile-image
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  border: 2px solid $brown
+  display: flex
+  align-items: center
+  background-image: url(../public/img/placeholder.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+.profile-info
+  display: flex
+  flex-direction: column
+  margin-left: 10px
+  width: calc( 100% - 80px )
+
+.profile-name
+  font-weight: normal
+  font-size: 24px
+
+.profile-details
+  font-size: 24px
+  font-family: $font
+  font-weight: normal
+
+.slide-text
+  font-size: 24px
+  color: #000
+  font-weight: normal
+  margin-top: 20px
+  line-height: 1.5
+
+/* Override Swiper's default pagination bullet styles
+
+
+.swiper-pagination-bullet
+  width: 85px
+
+  /* Customize bullet width
+  height: 15px
+
+  /* Customize bullet height
+  background-color: $light-yellow
+
+  /* Default bullet color
+
+  /* Space between bullets
+  border-radius: 25px
+
+  /* Rounded edges
+  
+  /* Make bullets fully opaque
+
+.swiper-pagination-bullet-active
+  background-color: $light-green
+
+  /* Active bullet color
+
+/* Additional specificity to override Swiper default styles
+
+.swiper-pagination-bullet.custom-bullet
+  width: 85px
+  height: 15px
+  background-color: $light-yellow
+  border-radius: 15px
+  opacity: 100
+  margin: 0 7.5px
+
+.swiper-pagination-bullet-active.custom-bullet
+  background-color: $light-green
+  border-radius: 15px

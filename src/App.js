@@ -7,6 +7,7 @@ import Values from './components/Values';
 import Participants from './components/Participants';
 import Accomodations from './components/Accomodations';
 import Team from './components/Team';
+import Feedback from './components/Feedback';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Participants />
       <Accomodations />
       <Team />
+      <Feedback />
     </>
   );
 }
