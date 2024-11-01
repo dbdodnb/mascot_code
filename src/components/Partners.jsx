@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 function Partners() {
+
+    useEffect(() => {
+        Aos.init({
+          once: true,
+        });
+        Aos.refresh();
+      }, []);
+
     return(
-            <div className="partners">
+            <div data-aos="fade-up" className="partners">
                 <div className="padding">
                     <p style={{
                         display: 'inline-block',

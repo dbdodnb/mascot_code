@@ -9,6 +9,8 @@ import Accomodations from './components/Accomodations';
 import Team from './components/Team';
 import Feedback from './components/Feedback';
 import Partners from './components/Partners';
+import Faq from './components/Faq';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Team />
       <Feedback />
       <Partners />
+      <Faq />
+      <Footer />
     </>
   );
 }

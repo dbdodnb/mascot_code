@@ -1,11 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Virtual, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 function Feedback() {
+
+    useEffect(() => {
+        Aos.init({
+          once: true,
+        });
+        Aos.refresh();
+      }, []);
+
     const [swiperRef, setSwiperRef] = useState(null);
 
     const [slides] = useState([
@@ -49,7 +59,7 @@ function Feedback() {
 
     return (
         <div className="padding">
-            <div className="feedback">
+            <div data-aos="fade-up" className="feedback">
                 <p style={{
                     textAlign: 'center',
                     display: 'inline-block',

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 function Team(){
+
+    useEffect(() => {
+        Aos.init({
+          once: true,
+        });
+        Aos.refresh();
+      }, []);
+
     return(
         <div className="padding">
-            <div className="team">
+            <div data-aos="fade-up" className="team">
                 <p style={{
                     textAlign: 'center',
                     display: 'inline-block',
