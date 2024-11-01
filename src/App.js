@@ -8,6 +8,7 @@ import Participants from './components/Participants';
 import Accomodations from './components/Accomodations';
 import Team from './components/Team';
 import Feedback from './components/Feedback';
+import Partners from './components/Partners';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Accomodations />
       <Team />
       <Feedback />
+      <Partners />
     </>
   );
 }

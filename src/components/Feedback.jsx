@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Virtual, Navigation, Pagination } from 'swiper/modules';
+import { Virtual, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -56,12 +56,16 @@ function Feedback() {
                     width: '100%'
                 }} className="section__heading">Reviews</p>
                 <Swiper
-                    modules={[Virtual, Navigation, Pagination]}
+                    modules={[Virtual, Navigation, Pagination, Autoplay]}
                     onSwiper={setSwiperRef}
                     slidesPerView={2}
                     centeredSlides={false}
                     spaceBetween={30}
                     navigation={true}
+                    autoplay={{
+                        delay: 9000,
+                        disableOnInteraction: false
+                    }}
                     pagination={{
                         clickable: true,
                         renderBullet: (index, className) => {

@@ -546,26 +546,17 @@ html {
   line-height: 1.5;
 }
 
-/* Override Swiper's default pagination bullet styles */
 .swiper-pagination-bullet {
   width: 85px;
-  /* Customize bullet width */
   height: 15px;
-  /* Customize bullet height */
   background-color: #FAF4D1;
-  /* Default bullet color */
-  /* Space between bullets */
   border-radius: 25px;
-  /* Rounded edges */
-  /* Make bullets fully opaque */
 }
 
 .swiper-pagination-bullet-active {
   background-color: #73AF0E;
-  /* Active bullet color */
 }
 
-/* Additional specificity to override Swiper default styles */
 .swiper-pagination-bullet.custom-bullet {
   width: 85px;
   height: 15px;
@@ -578,4 +569,48 @@ html {
 .swiper-pagination-bullet-active.custom-bullet {
   background-color: #73AF0E;
   border-radius: 15px;
+}
+
+/* partners */
+.partners {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.partners .partners__slider {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.partners .partners__slider .slider__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  animation: scrolling 50s linear infinite;
+}
+.partners .partners__slider .slider__items:hover {
+  animation-play-state: paused;
+}
+.partners .partners__slider .slider__items a {
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-image: url(../public/img/placeholder.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=App.css.map */
