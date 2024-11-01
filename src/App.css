@@ -62,7 +62,7 @@ table {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 150px;
 }
 
 /* header */
@@ -636,9 +636,9 @@ html {
 .accordion {
   display: block;
   background-color: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 25px;
   cursor: pointer;
-  padding: 18px;
+  padding: 20px 30px;
   width: 100%;
   border: none;
   text-align: left;
