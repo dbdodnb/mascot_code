@@ -5,7 +5,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
+import lisa from '../img/lisa.png'
+import maryna from '../img/maryna.png'
+import olena from '../img/olena.png'
+import danylo from '../img/danylo.png'
+import nastia from '../img/Anastasiia_Miniailo.png'
 
 function Feedback() {
 
@@ -14,47 +19,46 @@ function Feedback() {
           once: true,
         });
         Aos.refresh();
-      }, []);
+    }, []);
 
     const [swiperRef, setSwiperRef] = useState(null);
 
     const [slides] = useState([
         {
-            name: "John Doe",
-            city: "New York",
-            age: "32",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+            name: "Lisa Voloshyna",
+            city: "Kyiv",
+            age: "18",
+            text: "MASCOT is like a mini life that really changes me. I’ve overcome some of my fears, found new emotions, and now I feel like a different person. Everything that fills the camp — lectures, activities, energizers — will stay in my heart forever 💋",
+            photo: lisa,
         },
         {
-            name: "Jane Smith",
-            city: "Los Angeles",
-            age: "29",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+            name: "Maryna Polyvach",
+            city: "Kyiv",
+            age: "17",
+            text: "Every year, I return to MASCOT for the incredible people and the atmosphere they create. This is a place where I feel comfortable and happy, surrounded by people who inspire me to create even more throughout the year.",
+            photo: maryna,
         },
         {
-            name: "Alex Johnson",
-            city: "Chicago",
-            age: "41",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+            name: "Danylo Domskyi",
+            city: "Zhytomyr",
+            age: "17",
+            text: "MASCOT is something that changes your life once and for all. Once you come to this camp, trust me, it becomes a part of your life immediately. The people, atmosphere, values, activities — they all enter your life and stay with you for years to come.",
+            photo: danylo,
         },
         {
-            name: "Emily Davis",
-            city: "Houston",
-            age: "36",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+            name: "Anastasiia Miniailo",
+            city: "Kharkiv",
+            age: "16",
+            text: "MASCOT is the place that gave me invaluable experience of getting to know other parts of the community, the one you can’t explain in 3 sentences. I forgot for 10 days about everyday personal space bubbles, by living inside bubbles full of energizers, PDM sessions, incredible lectures and unimaginably cool people.",
+            photo: nastia
         },
         {
-            name: "Michael Brown",
-            city: "Phoenix",
-            age: "27",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+            name: "Olena Khiznychenko",
+            city: "Mykolaiv",
+            age: "17",
+            text: "Despite having attended dozens of projects before, MASCOT is the best one I have ever been to. It is a place with the closest knit-tight community, where I met people that I can easily call family just after one and a half weeks. Friendships made at MASCOT will last for years after the project.",
+            photo: olena,
         },
-        {
-            name: "Sarah Wilson",
-            city: "Philadelphia",
-            age: "34",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
-        }
     ]);
 
     return (
@@ -88,7 +92,11 @@ function Feedback() {
                         <SwiperSlide key={index} virtualIndex={index}>
                             <div className="slide-content">
                                 <div className="profile">
-                                    <div className="profile-image"></div>
+                                    <div className="profile-image" style={{ 
+                                        backgroundImage: `url(${slide.photo})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}></div>
                                     <div className="profile-info">
                                         <p className="profile-name">{slide.name}</p>
                                         <p className="profile-details">{slide.city}, {slide.age}</p>

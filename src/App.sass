@@ -53,6 +53,7 @@ $dark-orange: #CE7B02
 .text
   font-family: $font
   font-size: 24px
+  line-height: 1.5
 
 .text_underline
   text-decoration: underline
@@ -65,6 +66,7 @@ $dark-orange: #CE7B02
 html
   scroll-behavior: smooth
   scroll-padding-top: 150px
+  overflow-x: hidden
 
 /* header */
 .nav
@@ -124,7 +126,7 @@ html
           flex-direction: column
           justify-content: space-around
           width: 50%
-          height: 80%
+          height: 65%
           .heading
             color: $white
             font-size: 90px
@@ -336,6 +338,7 @@ html
       width: 43%
       height: 100px
       display: flex
+      align-items: center
       justify-content: space-between
       &:nth-child(2n)
         margin-left: 30px
@@ -350,6 +353,8 @@ html
         border-radius: 50%
       .text
         display: inline-block
+        display: flex
+        align-items: center
         width: calc( 100% - 90px )
         
 /* accomodations */
@@ -384,7 +389,7 @@ html
   .accomodations__photo
     width: 50%
     height: 400px
-    background-image: url(../public/img/placeholder.png)
+    background-image: url(../public/img/bosko.jpg)
     background-size: cover
     background-position: center
     background-repeat: no-repeat
@@ -469,10 +474,7 @@ html
   border: 2px solid $brown
   display: flex
   align-items: center
-  background-image: url(../public/img/placeholder.png)
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center
+    
 
 .profile-info
   display: flex
@@ -535,17 +537,32 @@ html
       justify-content: center
       align-items: center
       gap: 50px
-      animation: scrolling 50s linear infinite
+      animation: scrolling 30s linear infinite
       &:hover
         animation-play-state: paused
       a
         display: block
         width: 150px
         height: 150px
-        background-image: url(../public/img/placeholder.png)
         background-size: contain
         background-repeat: no-repeat
         background-position: center
+        &:nth-child(1n)
+          background-image: url(../public/img/partners/brandme.png)
+        &:nth-child(2n)
+          background-image: url(../public/img/partners/dodo.png)
+        &:nth-child(3n)
+          background-image: url(../public/img/partners/Golosy-ditej-fond.jpg)
+          background-size: 200%
+        &:nth-child(4n)
+          background-image: url(../public/img/partners/klei.png)
+        &:nth-child(5n)
+          background-image: url(../public/img/partners/morshynska.jpg)
+        &:nth-child(6n)
+          background-image: url(../public/img/partners/orner.png)
+          background-size: contain
+        &:nth-child(7n)
+          background-image: url(../public/img/partners/zone3000.png)
 
 @keyframes scrolling 
   0% 

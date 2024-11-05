@@ -14,6 +14,7 @@ function Header() {
                             <li><a className="nav__link" href="#about">About us</a></li>
                             <li><a className="nav__link" href="#accomodations">Accomodations</a></li>
                             <li><a className="nav__link" href="#faq">FAQ</a></li>
+                            <li></li>
                             <li><a className="nav__button" href="#">Support us</a></li>
                         </ul>
                     </div>
@@ -22,8 +23,9 @@ function Header() {
                 <div className="header__info padding">
                     <div className="header__text">
                         <p className="heading">Camp MASCOT</p>
-                        <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
-                        <p className="text text_underline">Application forms would be opened soon!</p>
+                        <p className="text">Camp MASCOT is a 10-day program for Ukrainian proactive teenagers aimed to build a bright future in Ukraine.
+                        </p>
+                        <p className="text text_underline">Applications will be opened here soon!</p>
                     </div>
                     <div className="header__slider">
                         <Swiper

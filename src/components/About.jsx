@@ -16,7 +16,9 @@ function About() {
             <div data-aos="fade-up" id="about" className="about">
                 <div className="about__text">
                     <p className="section__heading">About us</p>
-                    <p className="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p className="text">We believe that what truly makes camp unforgettable are the connections we build, the friendships we forge, and the community that stands together. Our goal is to create a safe and supportive space where everyone feels valued, respected, and encouraged to grow.</p>
+                    <p className="text">Since 2010, about 16 camps have been implemented for more than 900 teenagers.
+                    </p>
                 </div>
                 <div className="about__cards">
                     <div className="about__element">

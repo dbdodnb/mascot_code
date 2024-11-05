@@ -48,6 +48,7 @@ table {
 .text {
   font-family: "Alata", sans-serif;
   font-size: 24px;
+  line-height: 1.5;
 }
 
 .text_underline {
@@ -63,6 +64,7 @@ table {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
+  overflow-x: hidden;
 }
 
 /* header */
@@ -132,7 +134,7 @@ html {
   flex-direction: column;
   justify-content: space-around;
   width: 50%;
-  height: 80%;
+  height: 65%;
 }
 .header .header__info .header__text .heading {
   color: #FFFFFF;
@@ -361,6 +363,7 @@ html {
   width: 43%;
   height: 100px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .participants .participants__info .participants__bullet:nth-child(2n) {
@@ -380,6 +383,8 @@ html {
 }
 .participants .participants__info .participants__bullet .text {
   display: inline-block;
+  display: flex;
+  align-items: center;
   width: calc(100% - 90px);
 }
 
@@ -422,7 +427,7 @@ html {
 .accomodations .accomodations__photo {
   width: 50%;
   height: 400px;
-  background-image: url(../public/img/placeholder.png);
+  background-image: url(../public/img/bosko.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -520,10 +525,6 @@ html {
   border: 2px solid #6C4320;
   display: flex;
   align-items: center;
-  background-image: url(../public/img/placeholder.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .profile-info {
@@ -597,7 +598,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  animation: scrolling 50s linear infinite;
+  animation: scrolling 30s linear infinite;
 }
 .partners .partners__slider .slider__items:hover {
   animation-play-state: paused;
@@ -606,10 +607,32 @@ html {
   display: block;
   width: 150px;
   height: 150px;
-  background-image: url(../public/img/placeholder.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.partners .partners__slider .slider__items a:nth-child(1n) {
+  background-image: url(../public/img/partners/brandme.png);
+}
+.partners .partners__slider .slider__items a:nth-child(2n) {
+  background-image: url(../public/img/partners/dodo.png);
+}
+.partners .partners__slider .slider__items a:nth-child(3n) {
+  background-image: url(../public/img/partners/Golosy-ditej-fond.jpg);
+  background-size: 200%;
+}
+.partners .partners__slider .slider__items a:nth-child(4n) {
+  background-image: url(../public/img/partners/klei.png);
+}
+.partners .partners__slider .slider__items a:nth-child(5n) {
+  background-image: url(../public/img/partners/morshynska.jpg);
+}
+.partners .partners__slider .slider__items a:nth-child(6n) {
+  background-image: url(../public/img/partners/orner.png);
+  background-size: contain;
+}
+.partners .partners__slider .slider__items a:nth-child(7n) {
+  background-image: url(../public/img/partners/zone3000.png);
 }
 
 @keyframes scrolling {

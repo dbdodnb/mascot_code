@@ -3,7 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css"
 
 function Values() {
-    
+
     useEffect(() => {
         Aos.init({
           once: true,
@@ -12,12 +12,12 @@ function Values() {
       }, []);
 
     const blocks = [
-        { title: "Value 1", info: "Information about Value 1.", image: "../img/placeholder.png" },
-        { title: "Value 2", info: "Information about Value 2.", image: "../img/placeholder.png" },
-        { title: "Value 3", info: "Information about Value 3.", image: "../img/placeholder.png" },
-        { title: "Value 4", info: "Information about Value 4.", image: "../img/placeholder.png" },
-        { title: "Value 5", info: "Information about Value 5.", image: "../img/placeholder.png" },
-        { title: "Value 6", info: "Information about Value 6.", image: "../img/placeholder.png" },
+        { title: "Respect", info: "We do value each person equally", image: "../img/placeholder.png" },
+        { title: "Inclusivity", info: "We celebrate each and every background", image: "../img/placeholder.png" },
+        { title: "Communication", info: "We believe it’s an honest, open, and supportive key to solve any situation", image: "../img/placeholder.png" },
+        { title: "Trust", info: "We provide a comfortable safe space for everyone", image: "../img/placeholder.png" },
+        { title: "Community", info: "We are also the same people who wanna trust each other", image: "../img/placeholder.png" },
+        { title: "Equality and diversity", info: "We celebrate each and every background", image: "../img/placeholder.png" },
     ];
 
     const [expandedBlocks, setExpandedBlocks] = useState(Array(blocks.length).fill(false));
