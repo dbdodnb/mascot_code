@@ -6,113 +6,103 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Aos from "aos";
 import "aos/dist/aos.css";
-import sasha from '../img/team/Sasha_Sui.png'
-import nystia from '../img/team/Anastasiia_Khomenko.png'
-import alex from '../img/team/Oleksandr_Marchyshak.png'
-import illia from '../img/team/Illia_Chaikovskyi.png'
-import yulia from '../img/team/Yuliia_Buhera.png'
+import sasha from '../img/team/Sasha_Sui.png';
+import nystia from '../img/team/Anastasiia_Khomenko.png';
+import alex from '../img/team/Oleksandr_Marchyshak.png';
+import illia from '../img/team/Illia_Chaikovskyi.png';
+import yulia from '../img/team/Yuliia_Buhera.png';
+import { useTranslation } from "react-i18next";
 
-function Feedback() {
+function Team() {
+  const { t, i18n } = useTranslation();
 
-    useEffect(() => {
-        Aos.init({
-          once: true,
-        });
-        Aos.refresh();
-    }, []);
+  const [swiperRef, setSwiperRef] = useState(null);
+  const [slides, setSlides] = useState([]);
 
-    const [swiperRef, setSwiperRef] = useState(null);
+  // Initialize AOS animation
+  useEffect(() => {
+    Aos.init({ once: true });
+    Aos.refresh();
+  }, []);
 
-    const [slides] = useState([
-        {
-            name: "Oleksandra Viskovatova",
-            role: "Director of People",
-            photo: sasha,
-        },
-        {
-            name: "Anastasiia Khomenko",
-            role: "Program Director",
-            photo: nystia,
-        },
-        {
-            name: "Oleksandr Marchyshak",
-            role: "Partnership Manager",
-            photo: alex,
-        },
-        {
-            name: "Yuliia Buhera",
-            role: "Location Manager",
-            photo: yulia,
-        },
-        {
-            name: "Illia Chaikovskyi",
-            role: "Finance Manager",
-            photo: illia,
-        },
+  // Update slides based on the current language
+  useEffect(() => {
+    setSlides([
+      {
+        name: t('sasha'),
+        role: "Director of People",
+        photo: sasha,
+      },
+      {
+        name: t('nystia'),
+        role: "Program Director",
+        photo: nystia,
+      },
+      {
+        name: t('alex'),
+        role: "Partnership Manager",
+        photo: alex,
+      },
+      {
+        name: t('yulia'),
+        role: "Location Manager",
+        photo: yulia,
+      },
+      {
+        name: t('illia'),
+        role: "Finance Manager",
+        photo: illia,
+      },
     ]);
+  }, [t, i18n.language]); // Depend on `t` and `i18n.language` for updates
 
-    return (
-        <div className="padding">
-            <div data-aos="fade-up" className="feedback">
-                <p style={{
-                    textAlign: 'center',
-                    display: 'inline-block',
-                    width: '100%'
-                }} className="section__heading">Organizers 2025</p>
-                <Swiper
-                    modules={[Virtual, Navigation, Pagination, Autoplay]}
-                    onSwiper={setSwiperRef}
-                    slidesPerView={4}
-                    centeredSlides={false}
-                    spaceBetween={30}
-                    navigation={true}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false
+  return (
+    <div className="padding">
+      <div data-aos="fade-up" className="feedback">
+        <p className="section__heading" style={{ textAlign: 'center', width: '100%' }}>
+          {t('organizers')}
+        </p>
+        <Swiper
+          modules={[Virtual, Navigation, Pagination, Autoplay]}
+          onSwiper={setSwiperRef}
+          slidesPerView={4}
+          spaceBetween={30}
+          navigation={true}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{
+            clickable: true,
+            renderBullet: (index, className) => `<span class="${className} custom-bullet"></span>`,
+          }}
+          virtual
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index} virtualIndex={index}>
+              <div className="slide-content">
+                <div className="profile" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <div
+                    className="organizers-image"
+                    style={{
+                      width: '90%',
+                      paddingBottom: '90%',
+                      borderRadius: '50%',
+                      backgroundImage: `url(${slide.photo})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      border: '3px solid #6C4320',
                     }}
-                    pagination={{
-                        clickable: true,
-                        renderBullet: (index, className) => {
-                            return `<span class="${className} custom-bullet"></span>`;
-                        }
-                    }}
-                    virtual
-                >
-                    {slides.map((slide, index) => (
-                        <SwiperSlide key={index} virtualIndex={index}>
-                            <div className="slide-content">
-                                <div style={{
-                                    display: 'flex',
-                                    flexWrap: 'wrap',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                }} className="profile">
-                                    <div className="organizers-image" style={{ 
-                                        width: '90%',
-                                        paddingBottom: '90%',
-                                        borderRadius: '50%',
-                                        backgroundImage: `url(${slide.photo})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                        border: '3px solid #6C4320',
-                                        boxSizing: 'border-box'
-                                    }}></div>
-                                    <div style={{
-                                        width: '100%',
-                                        marginTop: '20px',
-                                        textAlign: 'center'
-                                    }} className="profile-info">
-                                        <p className="profile-name">{slide.name}</p>
-                                        <p className="profile-details">{slide.role}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-        </div>
-    );
+                  ></div>
+                  <div className="profile-info" style={{ width: '100%', marginTop: '20px', textAlign: 'center' }}>
+                    <p className="profile-name">{slide.name}</p>
+                    <p className="profile-details">{slide.role}</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  );
 }
 
-export default Feedback;
+export default Team;

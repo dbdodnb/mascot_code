@@ -1,8 +1,15 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { useTranslation } from "react-i18next";
 
 function Partners() {
+
+    const { t, i18n } = useTranslation();
+
+    const handleChangeLanguage = (lang) => {
+        i18n.changeLanguage(lang); // Change language at the component level
+    };
 
     useEffect(() => {
         Aos.init({
@@ -17,7 +24,7 @@ function Partners() {
                     <p style={{
                         display: 'inline-block',
                         width: '100%'
-                    }} className="section__heading">Our partners</p>
+                    }} className="section__heading">{t('partners')}</p>
                 </div>
                 <div style={{
                     padding: "0 -100px",

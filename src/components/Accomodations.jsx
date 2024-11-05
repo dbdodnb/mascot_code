@@ -9,8 +9,15 @@ import pic1 from '../img/bosko.jpg'
 import pic2 from '../img/bosko2.jpg'
 import pic3 from '../img/bosko3.webp'
 import pic4 from '../img/bosko4.jpg'
+import { useTranslation } from "react-i18next";
 
 function Accomodations(){
+
+    const { t, i18n } = useTranslation();
+
+    const handleChangeLanguage = (lang) => {
+        i18n.changeLanguage(lang); // Change language at the component level
+    };
 
     useEffect(() => {
         Aos.init({
@@ -28,24 +35,24 @@ function Accomodations(){
                     textAlign: 'right',
                     display: 'inline-block',
                     width: '100%'
-                }} className="section__heading">What do we provide?</p>
+                }} className="section__heading">{t('accomodationsTitle')}</p>
                 <div className="accomodations__bullets">
                     <div>
                         <div className="bullet"></div>
-                        <p className="text">Location on the West of Ukraine</p>
+                        <p className="text">{t('accomodations1')}</p>
                     </div>
                     <div>
                         <div className="bullet"></div>
-                        <p className="text">Comfortable rooms for 4-6 peopled</p>
+                        <p className="text">{t('accomodations2')}</p>
                     </div>
                     <div>
                         <div className="bullet"></div>
-                        <p className="text">Bomb shelter, medical specialist, and security during the program
+                        <p className="text">{t('accomodations3')}
                         </p>
                     </div>
                     <div>
                         <div className="bullet"></div>
-                        <p className="text">3-times food course with vegetarian and vegan options</p>
+                        <p className="text">{t('accomodations4')}</p>
                     </div>
                 </div>
                 <Swiper

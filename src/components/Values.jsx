@@ -1,8 +1,15 @@
 import React, { useRef, useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { useTranslation } from 'react-i18next';
 
 function Values() {
+
+    const { t, i18n } = useTranslation();
+
+    const handleChangeLanguage = (lang) => {
+        i18n.changeLanguage(lang); // Change language at the component level
+    };
 
     useEffect(() => {
         Aos.init({
@@ -12,12 +19,12 @@ function Values() {
       }, []);
 
     const blocks = [
-        { title: "Respect", info: "We do value each person equally", image: "../img/placeholder.png" },
-        { title: "Inclusivity", info: "We celebrate each and every background", image: "../img/placeholder.png" },
-        { title: "Communication", info: "We believe it’s an honest, open, and supportive key to solve any situation", image: "../img/placeholder.png" },
-        { title: "Trust", info: "We provide a comfortable safe space for everyone", image: "../img/placeholder.png" },
-        { title: "Community", info: "We are also the same people who wanna trust each other", image: "../img/placeholder.png" },
-        { title: "Equality and diversity", info: "We celebrate each and every background", image: "../img/placeholder.png" },
+        { title: t('respect'), info: t('respectDef'), image: "../img/placeholder.png" },
+        { title: t('inclusivity'), info: t('inclusivityDef'), image: "../img/placeholder.png" },
+        { title: t('communication'), info: t('communicationDef'), image: "../img/placeholder.png" },
+        { title: t('trust'), info: t('trustDef'), image: "../img/placeholder.png" },
+        { title: t('community'), info: t('communityDef'), image: "../img/placeholder.png" },
+        { title: t('equality'), info: t('equalityDef'), image: "../img/placeholder.png" },
     ];
 
     const [expandedBlocks, setExpandedBlocks] = useState(Array(blocks.length).fill(false));
@@ -45,7 +52,7 @@ function Values() {
     return (
         <div className="padding">
             <div data-aos="fade-up" className="values">
-                <p className="section__heading section__heading_center">Values</p>
+                <p className="section__heading section__heading_center">{t('values')}</p>
                 <div className="values__container">
                     {blocks.map((block, index) => {
                         const isExpanded = expandedBlocks[index];
@@ -80,7 +87,7 @@ function Values() {
                                     ref={setRef(titleRefs, index)}
                                     id={`valuesTitle${index}`}
                                     className="text"
-                                    style={{ display: isExpanded || isHovered ? "none" : "block" }}
+                                    style={{ display: isExpanded || isHovered ? "none" : "block", textAlign: 'center' }}
                                 >
                                     {block.title}
                                 </p>

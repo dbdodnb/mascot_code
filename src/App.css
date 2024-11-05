@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -46,19 +46,22 @@ table {
 }
 
 .text {
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 24px;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 .text_underline {
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .section__heading {
   color: #114917;
   font-size: 64px;
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
 }
 
 html {
@@ -101,7 +104,7 @@ html {
   justify-content: space-between;
 }
 .nav .nav__info ul li {
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
   margin-left: 50px;
   display: flex;
   justify-content: center;
@@ -111,6 +114,42 @@ html {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 24px;
+  font-weight: 600;
+}
+
+.language-toggle {
+  width: 75px;
+  height: 40px;
+  background-color: #FAF4D1;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.toggle-slider {
+  width: 35px;
+  height: 35px;
+  background-color: #6C4320;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #FFFFFF;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.toggle-slider.english {
+  left: 4px;
+}
+.toggle-slider.ukrainian {
+  left: calc(50% - 2px);
 }
 
 .header {
@@ -133,13 +172,14 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 50%;
+  width: 55%;
   height: 65%;
 }
 .header .header__info .header__text .heading {
   color: #FFFFFF;
   font-size: 90px;
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
 }
 .header .header__slider {
   width: 45%;
@@ -238,18 +278,19 @@ html {
   align-items: center;
   font-size: 35px;
   letter-spacing: 15px;
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 .scrollingText .marquee {
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
   display: flex;
-  gap: 1rem;
+  gap: 0rem;
 }
 .scrollingText .marquee span {
   display: inline-block;
-  animation: marquee 170s linear infinite;
+  animation: marquee 20s linear infinite;
+  margin-right: 40px;
 }
 
 @keyframes marquee {
@@ -505,7 +546,7 @@ html {
   padding: 20px;
   border-radius: 10px;
   text-align: left;
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
   margin-bottom: 30px;
 }
 
@@ -541,7 +582,7 @@ html {
 
 .profile-details {
   font-size: 24px;
-  font-family: "Alata", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: normal;
 }
 

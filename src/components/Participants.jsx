@@ -13,8 +13,16 @@ import pic5 from '../img/participants/5.jpg';
 import pic6 from '../img/participants/6.jpg';
 import pic7 from '../img/participants/7.jpg';
 import pic8 from '../img/participants/8.jpg'
+import { useTranslation } from "react-i18next";
 
 function Participants() {
+
+    const { t, i18n } = useTranslation();
+
+    const handleChangeLanguage = (lang) => {
+        i18n.changeLanguage(lang); // Change language at the component level
+    };
+
     useEffect(() => {
         Aos.init({
           once: true,
@@ -33,7 +41,7 @@ function Participants() {
                         marginBottom: "50px",
                     }}
                 >
-                    Who can join the camp?
+                    {t('join')}
                 </p>
                 <Swiper
                     grabCursor={true}
@@ -122,19 +130,19 @@ function Participants() {
                 <div className="participants__info">
                     <div className="participants__bullet">
                         <div></div>
-                        <p className="text">15-20 years old</p>
+                        <p className="text">{t('join1')}</p>
                     </div>
                     <div className="participants__bullet">
                         <div></div>
-                        <p className="text">All over Ukraine</p>
+                        <p className="text">{t('join2')}</p>
                     </div>
                     <div className="participants__bullet">
                         <div></div>
-                        <p className="text">72 participants</p>
+                        <p className="text">{t('join3')}</p>
                     </div>
                     <div className="participants__bullet">
                         <div></div>
-                        <p className="text">Ready to engage, learn, and grow teenagers</p>
+                        <p className="text">{t('join4')}</p>
                     </div>
                 </div>
             </div>
