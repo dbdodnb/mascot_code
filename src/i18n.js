@@ -37,7 +37,7 @@ i18n
             join4: "Ready to engage, learn, and grow teenagers",
             accomodationsTitle: "What do we provide?",
             accomodations1: "Location on the West of Ukraine",
-            accomodations2: "Comfortable rooms for 4-6 peopled",
+            accomodations2: "Comfortable rooms for 4-6 people",
             accomodations3: "Bomb shelter, medical specialist, and security during the program",
             accomodations4: "3-times food course with vegetarian and vegan options",
             organizers: "Organizers 2025",

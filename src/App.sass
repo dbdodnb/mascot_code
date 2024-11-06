@@ -560,56 +560,56 @@ html
   border-radius: 15px
 
 /* partners */
-.partners
-  margin-top: 50px
-  display: flex
-  flex-wrap: wrap
-  .partners__slider
-    margin-top: 50px
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 100%
-    overflow: hidden
-    border: 1px solid rgba(255, 255, 255, 0.4)
-    .slider__items
-      display: flex
-      justify-content: center
-      align-items: center
-      gap: 50px
-      animation: scrolling 30s linear infinite
-      &:hover
-        animation-play-state: paused
-      a
-        display: block
-        width: 150px
-        height: 150px
-        background-size: contain
-        background-repeat: no-repeat
-        background-position: center
-        &:nth-child(1n)
-          background-image: url(../public/img/partners/brandme.png)
-        &:nth-child(2n)
-          background-image: url(../public/img/partners/dodo.png)
-        &:nth-child(3n)
-          background-image: url(../public/img/partners/Golosy-ditej-fond.jpg)
-          background-size: 200%
-        &:nth-child(4n)
-          background-image: url(../public/img/partners/klei.png)
-        &:nth-child(5n)
-          background-image: url(../public/img/partners/morshynska.jpg)
-        &:nth-child(6n)
-          background-image: url(../public/img/partners/orner.png)
-          background-size: contain
-        &:nth-child(7n)
-          background-image: url(../public/img/partners/zone3000.png)
-
+.partners 
+    margin-top: 50px 
+    display: flex 
+    flex-wrap: wrap 
+    .partners__slider 
+        margin-top: 50px 
+        display: flex 
+        justify-content: flex-start 
+        align-items: center 
+        width: 100% 
+        overflow: hidden 
+        border: 1px solid rgba(255, 255, 255, 0.4) 
+        position: relative 
+        .slider__items 
+            display: flex 
+            justify-content: center 
+            align-items: center 
+            gap: 50px 
+            animation: scrolling 30s linear infinite 
+            width: max-content 
+            margin-right: 50px
+            a 
+              display: block 
+              width: 150px 
+              height: 150px 
+              background-size: contain 
+              background-repeat: no-repeat 
+              background-position: center 
+              &:nth-child(1) 
+                background-image: url(../public/img/partners/brandme.png) 
+              &:nth-child(2) 
+                background-image: url(../public/img/partners/dodo.png) 
+              &:nth-child(3) 
+                background-image: url(../public/img/partners/Golosy-ditej-fond.jpg) 
+                background-size: 200% 
+              &:nth-child(4) 
+                background-image: url(../public/img/partners/klei.png) 
+              &:nth-child(5) 
+                background-image: url(../public/img/partners/morshynska.jpg) 
+              &:nth-child(6) 
+                background-image: url(../public/img/partners/orner.png) 
+                background-size: contain 
+              &:nth-child(7) 
+                background-image: url(../public/img/partners/zone3000.png) 
 @keyframes scrolling 
-  0% 
-    transform: translateX(80%)
+    0% 
+      transform: translateX(0) 
+    100% 
+      transform: translateX(-50%) 
 
-  100% 
-    transform: translateX(-20%)
   
 /* faq */
 .faq

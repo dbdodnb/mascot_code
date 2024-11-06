@@ -628,11 +628,12 @@ html {
 .partners .partners__slider {
   margin-top: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
 }
 .partners .partners__slider .slider__items {
   display: flex;
@@ -640,9 +641,9 @@ html {
   align-items: center;
   gap: 50px;
   animation: scrolling 30s linear infinite;
-}
-.partners .partners__slider .slider__items:hover {
-  animation-play-state: paused;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 50px;
 }
 .partners .partners__slider .slider__items a {
   display: block;
@@ -652,36 +653,36 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.partners .partners__slider .slider__items a:nth-child(1n) {
+.partners .partners__slider .slider__items a:nth-child(1) {
   background-image: url(../public/img/partners/brandme.png);
 }
-.partners .partners__slider .slider__items a:nth-child(2n) {
+.partners .partners__slider .slider__items a:nth-child(2) {
   background-image: url(../public/img/partners/dodo.png);
 }
-.partners .partners__slider .slider__items a:nth-child(3n) {
+.partners .partners__slider .slider__items a:nth-child(3) {
   background-image: url(../public/img/partners/Golosy-ditej-fond.jpg);
   background-size: 200%;
 }
-.partners .partners__slider .slider__items a:nth-child(4n) {
+.partners .partners__slider .slider__items a:nth-child(4) {
   background-image: url(../public/img/partners/klei.png);
 }
-.partners .partners__slider .slider__items a:nth-child(5n) {
+.partners .partners__slider .slider__items a:nth-child(5) {
   background-image: url(../public/img/partners/morshynska.jpg);
 }
-.partners .partners__slider .slider__items a:nth-child(6n) {
+.partners .partners__slider .slider__items a:nth-child(6) {
   background-image: url(../public/img/partners/orner.png);
   background-size: contain;
 }
-.partners .partners__slider .slider__items a:nth-child(7n) {
+.partners .partners__slider .slider__items a:nth-child(7) {
   background-image: url(../public/img/partners/zone3000.png);
 }
 
 @keyframes scrolling {
   0% {
-    transform: translateX(80%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-20%);
+    transform: translateX(-50%);
   }
 }
 /* faq */
