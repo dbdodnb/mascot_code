@@ -91,9 +91,14 @@ function Team() {
                       border: '3px solid #6C4320',
                     }}
                   ></div>
-                  <div className="profile-info" style={{ width: '100%', marginTop: '20px', textAlign: 'center' }}>
-                    <p className="profile-name">{slide.name}</p>
-                    <p className="profile-details">{slide.role}</p>
+                  <div className="profile-info" style={{ width: '100%', marginTop: '20px', textAlign: 'center', display: 'inline-block', height: '50px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <p style={{
+                        fontWeight: '700',
+                        fontSize: '22px'
+                    }} className="profile-name">{slide.name}</p>
+                    <p style={{
+                        fontSize: '20px'
+                    }} className="profile-details">{slide.role}</p>
                   </div>
                 </div>
               </div>
