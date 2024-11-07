@@ -406,6 +406,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .participants .participants__info .participants__bullet:nth-child(2n) {
   margin-left: 30px;
@@ -426,7 +427,10 @@ html {
   display: inline-block;
   display: flex;
   align-items: center;
-  width: calc(100% - 90px);
+  width: 100%;
+  position: relative;
+  top: -50px;
+  left: 40px;
 }
 
 /* accomodations */
