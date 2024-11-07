@@ -68,7 +68,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic1} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -76,7 +78,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic2} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -84,7 +88,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic3} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -92,7 +98,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic4} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -100,7 +108,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic5} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -108,7 +118,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic6} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -116,7 +128,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic7} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#fff',
@@ -124,7 +138,9 @@ function Participants() {
                         justifyContent: 'center',
                         alignItems: 'center'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic8} alt="Participant 1" /></SwiperSlide>
                 </Swiper>
                 <div className="participants__info">

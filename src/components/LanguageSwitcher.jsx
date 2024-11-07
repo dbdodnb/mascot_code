@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
   return (
     <div className="language-toggle" onClick={toggleLanguage}>
       <div className={`toggle-slider ${currentLanguage === 'en' ? 'english' : 'ukrainian'}`}>
-        {currentLanguage === 'en' ? 'Укр' : 'Eng'}
+        {currentLanguage === 'en' ? 'Eng' : 'Укр'}
       </div>
     </div>
   );

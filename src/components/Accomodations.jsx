@@ -62,7 +62,7 @@ function Accomodations(){
                         display: "flex",
                         justifySelf: 'flex-end',
                         alignSelf: 'center',
-                        borderRadius: '0px',
+                        borderRadius: '25px',
                         marginRight: '0px'
                     }}
                     grabCursor={true}
@@ -90,7 +90,9 @@ function Accomodations(){
                         alignItems: 'center',
                         borderRadius: '0px',
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic1} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#114917',
@@ -99,7 +101,9 @@ function Accomodations(){
                         alignItems: 'center',
                         borderRadius: '0px'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic2} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#114917',
@@ -108,7 +112,9 @@ function Accomodations(){
                         alignItems: 'center',
                         borderRadius: '0px'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic3} alt="Participant 1" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#114917',
@@ -117,7 +123,9 @@ function Accomodations(){
                         alignItems: 'center',
                         borderRadius: '0px'
                     }}><img style={{
-                        width: '100%'
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
                     }} src={pic4} alt="Participant 1" /></SwiperSlide>
                 </Swiper>
             </div>
