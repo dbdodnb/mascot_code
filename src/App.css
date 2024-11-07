@@ -721,7 +721,7 @@ html {
   transition: max-height 0.2s ease-out;
 }
 .panel .text {
-  padding: 25px 20px;
+  padding: 25px 5px;
 }
 
 /* footer */
