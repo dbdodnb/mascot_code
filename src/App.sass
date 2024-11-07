@@ -259,6 +259,23 @@ html
   &:nth-child(10n)
     background-image: url(../public/img/header/10.jpg)
 
+@media  (max-width: 1390px)
+  .header .header__info .header__text .heading
+    font-size: 70px
+
+@media (max-width: 1300px) 
+  .header .header__info .header__text
+    height: 50%
+    width: 50%
+  .header .header__slider
+    width: 35%
+  
+@media (max-width: 1200px)
+  .swiper
+    width: 350px
+    height: 500px
+  .header .header__info .header__text
+    width: 55%
 
 
   /* MASCOT is all*/
@@ -296,6 +313,7 @@ html
   width: 100%
   margin-top: 50px
   display: flex
+  flex-wrap: wrap
   justify-content: space-between
   .about__text
     width: 45%
@@ -319,6 +337,15 @@ html
         background-color: $light-green
       a
         color: #000
+
+@media (max-width: 1200px)
+  .about .about__text
+    width: 100%
+  .about .about__cards
+    width: 100%
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(1, 250px)
+    margin-top: 50px
 
 /* values */
 .values
@@ -352,6 +379,10 @@ html
         text-align: center
         display: none
 
+@media (max-width: 1200px)
+  .values .values__container div
+    width: 40%
+
 /* participants */
 .participants
   margin-top: 50px
@@ -359,6 +390,8 @@ html
   display: flex
   flex-wrap: wrap
   justify-content: space-between
+  .swiper2
+    display: none
   .swiper
     width: 30%
     height: 300px 
@@ -396,10 +429,38 @@ html
         display: inline-block
         display: flex
         align-items: center
-        width: 100%
+        width: calc( 100% - 40px )
         position: relative
         top: -50px
         left: 40px
+
+@media (max-width: 1300px)
+  .participants .participants__info
+    width: 60%
+    justify-content: space-between
+  .participants .participants__info .participants__bullet:nth-child(3n), .participants .participants__info .participants__bullet:nth-child(4n), .participants .participants__info .participants__bullet:nth-child(2n)
+    margin-left: 0
+  .participants .participants__info .participants__bullet
+    width: 48%
+  .participants .swiper
+    width: 35%
+
+@media (max-width: 1200px)
+  .participants .participants__info
+    width: 100%
+    justify-content: flex-start
+    .participants__bullet
+      width: 40%
+      &:nth-child(3n)
+        margin-left: 20%
+  .participants .swiper
+    display: none
+  .participants .swiper2
+      display: block
+      width: 100%
+      height: 300px
+      margin-top: 50px
+      
         
 /* accomodations */
 .padding_accomodations
@@ -430,6 +491,12 @@ html
         width: calc( 100% - 80px )
         margin-left: -40px
         margin-top: 30px
+
+@media ( max-width: 1300px ) 
+  .accomodations .accomodations__bullets
+    width: 50%
+  .accomodations .swiper
+    width: 40%
     
 /* team */
 .team

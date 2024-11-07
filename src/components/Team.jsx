@@ -65,7 +65,6 @@ function Team() {
         <Swiper
           modules={[Virtual, Navigation, Pagination, Autoplay]}
           onSwiper={setSwiperRef}
-          slidesPerView={4}
           spaceBetween={30}
           navigation={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
@@ -74,6 +73,14 @@ function Team() {
             renderBullet: (index, className) => `<span class="${className} custom-bullet"></span>`,
           }}
           virtual
+          breakpoints={{
+            0: {
+                slidesPerView: 3,
+            },
+            1300: {
+                slidesPerView: 4,
+            }
+          }}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} virtualIndex={index}>

@@ -1,32 +1,43 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import Aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import { EffectCreative, Autoplay } from 'swiper/modules';
-import pic1 from '../img/bosko.jpg'
-import pic2 from '../img/bosko2.jpg'
-import pic3 from '../img/bosko3.webp'
-import pic4 from '../img/bosko4.jpg'
+import pic1 from '../img/bosko.jpg';
+import pic2 from '../img/bosko2.jpg';
+import pic3 from '../img/bosko3.webp';
+import pic4 from '../img/bosko4.jpg';
 import { useTranslation } from "react-i18next";
 
-function Accomodations(){
-
+function Accomodations() {
     const { t, i18n } = useTranslation();
 
     const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang); // Change language at the component level
     };
 
-    useEffect(() => {
-        Aos.init({
-          once: true,
-        });
-        Aos.refresh();
-      }, []);
+    const [swiperWidth, setSwiperWidth] = useState(window.innerWidth <= 1301 ? '40%' : '50%');
 
-    return(
+    useEffect(() => {
+        // Update swiper width on window resize
+        const handleResize = () => {
+            setSwiperWidth(window.innerWidth <= 1301 ? '40%' : '50%');
+        };
+        window.addEventListener('resize', handleResize);
+
+        // Initialize AOS animations
+        Aos.init({ once: true });
+        Aos.refresh();
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
         <div data-aos="fade-up" className="padding padding_accomodations">
             <div id="accomodations" className="accomodations">
                 <p style={{
@@ -47,8 +58,7 @@ function Accomodations(){
                     </div>
                     <div>
                         <div className="bullet"></div>
-                        <p className="text">{t('accomodations3')}
-                        </p>
+                        <p className="text">{t('accomodations3')}</p>
                     </div>
                     <div>
                         <div className="bullet"></div>
@@ -57,7 +67,7 @@ function Accomodations(){
                 </div>
                 <Swiper
                     style={{
-                        width: '50%',
+                        width: swiperWidth,
                         height: '400px',
                         display: "flex",
                         justifySelf: 'flex-end',
@@ -104,7 +114,7 @@ function Accomodations(){
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover'
-                    }} src={pic2} alt="Participant 1" /></SwiperSlide>
+                    }} src={pic2} alt="Participant 2" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#114917',
                         display: 'flex',
@@ -115,7 +125,7 @@ function Accomodations(){
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover'
-                    }} src={pic3} alt="Participant 1" /></SwiperSlide>
+                    }} src={pic3} alt="Participant 3" /></SwiperSlide>
                     <SwiperSlide style={{
                         background: '#114917',
                         display: 'flex',
@@ -126,11 +136,11 @@ function Accomodations(){
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover'
-                    }} src={pic4} alt="Participant 1" /></SwiperSlide>
+                    }} src={pic4} alt="Participant 4" /></SwiperSlide>
                 </Swiper>
             </div>
         </div>
-    )
+    );
 }
 
-export default Accomodations
+export default Accomodations;
