@@ -81,7 +81,6 @@ function Faq() {
                                 <p 
                                     style={{
                                         opacity: '0.7',
-                                        padding: '10px 20px',
                                         margin: 0
                                     }}
                                     className="text"
