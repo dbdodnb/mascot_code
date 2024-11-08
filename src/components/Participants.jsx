@@ -74,6 +74,10 @@ function Participants() {
                         delay: 3500,
                         disableOnInteraction: false
                     }}
+                    pagination={{
+                        clickable: true,
+                        renderBullet: (index, className) => `<span class="${className} custom-bullet"></span>`,
+                      }}
                     className="swiper"
                 >
                     {[pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8].map((pic, index) => (
@@ -107,7 +111,14 @@ function Participants() {
                     className="swiper2"
                     modules={[Virtual, Navigation, Pagination, Autoplay]}
                     onSwiper={setSwiperRef}
-                    slidesPerView={3}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 2
+                        },
+                        951: {
+                            slidesPerView: 3
+                        }
+                    }}
                     spaceBetween={40}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     virtual

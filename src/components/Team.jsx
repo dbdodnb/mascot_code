@@ -75,6 +75,9 @@ function Team() {
           virtual
           breakpoints={{
             0: {
+              slidesPerView: 2,
+            },
+            851: {
                 slidesPerView: 3,
             },
             1300: {

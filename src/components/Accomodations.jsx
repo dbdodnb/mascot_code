@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Virtual, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import 'swiper/css/effect-creative';
 import { EffectCreative, Autoplay } from 'swiper/modules';
 import pic1 from '../img/bosko.jpg';
@@ -17,6 +20,15 @@ function Accomodations() {
     const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang); // Change language at the component level
     };
+
+    const [swiperRef, setSwiperRef] = useState(null);
+    const [slides, setSlides] = useState([]);
+
+    // Update slides based on the current language
+    useEffect(() => {
+        setSlides([
+        ]);
+    }, [t, i18n.language]);
 
     const [swiperWidth, setSwiperWidth] = useState(window.innerWidth <= 1301 ? '40%' : '50%');
 
@@ -69,9 +81,6 @@ function Accomodations() {
                     style={{
                         width: swiperWidth,
                         height: '400px',
-                        display: "flex",
-                        justifySelf: 'flex-end',
-                        alignSelf: 'center',
                         borderRadius: '25px',
                         marginRight: '0px'
                     }}
@@ -91,7 +100,7 @@ function Accomodations() {
                         delay: 3500,
                         disableOnInteraction: false
                     }}
-                    className="mySwiper"
+                    className="swiper1participants"
                 >
                     <SwiperSlide style={{
                         background: '#114917',
@@ -137,6 +146,28 @@ function Accomodations() {
                         height: '100%',
                         objectFit: 'cover'
                     }} src={pic4} alt="Participant 4" /></SwiperSlide>
+                </Swiper>
+                <Swiper
+                    modules={[Virtual, Navigation, Pagination, Autoplay]}
+                    onSwiper={setSwiperRef}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1
+                        },
+                        701: {
+                            slidesPerView: 2
+                        }
+                    }}
+                    spaceBetween={40}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    virtual
+                    className="swiper2participants"
+                >
+                    {[pic1, pic2, pic3, pic4].map((pic, index) => (
+                        <SwiperSlide key={index} virtualIndex={index}>
+                            <img style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '25px' }} src={pic} alt={`Participant ${index + 1}`} />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </div>
