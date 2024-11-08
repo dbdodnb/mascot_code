@@ -52,7 +52,9 @@ function Faq() {
                 >
                     {t('faqTitle')}
                 </p>
-                <div className="faq__questions">
+                <div style={{
+                    color: '#000'
+                }} className="faq__questions">
                     {questions.map((question, index) => (
                         <div key={index} style={{ marginBottom: '10px' }}>
                             <button
@@ -62,7 +64,8 @@ function Faq() {
                                     display: 'flex',
                                     justifyContent: 'space-between',
                                     alignItems: 'center',
-                                    cursor: 'pointer'
+                                    cursor: 'pointer', 
+                                    color: '#000'
                                 }}
                             >
                                 <span>{question}</span>
@@ -81,7 +84,8 @@ function Faq() {
                                 <p 
                                     style={{
                                         opacity: '0.7',
-                                        margin: 0
+                                        margin: 0, 
+                                        color: '#000'
                                     }}
                                     className="text"
                                     dangerouslySetInnerHTML={{ __html: answers[index].replace(/\n\n/g, "<br /><br />") }}
