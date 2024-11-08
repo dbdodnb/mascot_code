@@ -83,6 +83,14 @@ function Feedback() {
                         renderBullet: (index, className) => `<span class="${className} custom-bullet"></span>`,
                     }}
                     virtual
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1
+                        },
+                        1100: {
+                            slidesPerView: 2
+                        }
+                    }}
                 >
                     {slides.map((slide, index) => (
                         <SwiperSlide key={index} virtualIndex={index}>

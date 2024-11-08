@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useTranslation } from 'react-i18next';
+import placeholder from '../img/placeholder.png'
 
 function Values() {
 
@@ -19,12 +20,12 @@ function Values() {
       }, []);
 
     const blocks = [
-        { title: t('respect'), info: t('respectDef'), image: "../img/placeholder.png" },
-        { title: t('inclusivity'), info: t('inclusivityDef'), image: "../img/placeholder.png" },
-        { title: t('communication'), info: t('communicationDef'), image: "../img/placeholder.png" },
-        { title: t('trust'), info: t('trustDef'), image: "../img/placeholder.png" },
-        { title: t('community'), info: t('communityDef'), image: "../img/placeholder.png" },
-        { title: t('equality'), info: t('equalityDef'), image: "../img/placeholder.png" },
+        { title: t('respect'), info: t('respectDef'), image: placeholder },
+        { title: t('inclusivity'), info: t('inclusivityDef'), image:placeholder },
+        { title: t('communication'), info: t('communicationDef'), image: placeholder },
+        { title: t('trust'), info: t('trustDef'), image: placeholder },
+        { title: t('community'), info: t('communityDef'), image: placeholder },
+        { title: t('equality'), info: t('equalityDef'), image: placeholder },
     ];
 
     const [expandedBlocks, setExpandedBlocks] = useState(Array(blocks.length).fill(false));
