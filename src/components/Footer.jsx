@@ -11,7 +11,7 @@ function Footer(){
                 </div>
                 <div className="footer__logo"></div>
                 <div className="footer_socials">
-                    <a target="_blank" href="https://www.instagram.com/campmascot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></a>
+                    <a className="firstLink" target="_blank" href="https://www.instagram.com/campmascot?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="></a>
                     <a target="_blank" href="https://www.youtube.com/@campmascot"></a>
                     <a target="_blank" href="https://www.facebook.com/share/HuGDf1zoPnzWGgA9/?mibextid=LQQJ4d"></a>
                     <a target="_blank" href="mailto:campmascotua@gmail.com"></a>

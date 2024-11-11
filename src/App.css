@@ -80,6 +80,21 @@ html {
     font-size: 50px;
   }
 }
+@media (max-width: 600px) {
+  .section__heading {
+    font-size: 35px;
+  }
+}
+@media (max-width: 550px) {
+  .padding {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 450px) {
+  .text {
+    font-size: 20px;
+  }
+}
 /* header */
 .nav {
   width: 100%;
@@ -432,6 +447,19 @@ html {
   .headerAdaptive .headerAdaptive__info .heading {
     font-size: 60px;
   }
+}
+@media (max-width: 600px) {
+  .headerAdaptive .headerAdaptive__info .heading {
+    font-size: 45px;
+  }
+}
+@media (max-width: 550px) {
+  .navBurger {
+    padding: 0 30px;
+  }
+  .headerAdaptive .headerAdaptive__info {
+    padding: 0 30px;
+  }
   /* MASCOT is all*/
 }
 .scrollingText {
@@ -481,9 +509,9 @@ html {
 }
 .about .about__cards {
   width: 50%;
-  display: grid;
-  grid-template-rows: 250px 250px;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   grid-row-gap: 20px;
 }
 .about .about__cards .about__element {
@@ -491,6 +519,7 @@ html {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  width: 50%;
 }
 .about .about__cards .about__element div {
   width: 165px;
@@ -525,16 +554,22 @@ html {
     padding-bottom: 20px;
   }
   .about .about__cards .swiper .swiper-slide {
-    height: 210px;
+    height: auto;
     background: none;
   }
   .about .about__cards .swiper .swiper-slide .about__element {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: 100%;
     height: 100%;
     color: #000;
+  }
+  .about .about__cards .swiper .swiper-slide .about__element .text {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
   }
   .swiper-pagination-bullet {
     width: 40px;
@@ -584,6 +619,37 @@ html {
 .values .values__container div .values__info {
   text-align: center;
   display: none;
+}
+
+.values .swiper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.values .swiper .swiper-slide {
+  color: #000;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.values .swiper .swiper-slide .value-block {
+  width: 80%;
+  height: 80%;
+  border-radius: 25px;
+  border: 3px solid #6C4320;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.values .swiper .swiper-slide .value-block .img {
+  border-radius: 25px;
+}
+.values .swiper .swiper-slide .value-block .text {
+  text-align: center;
+  margin-top: 30px;
 }
 
 @media (max-width: 1200px) {
@@ -708,6 +774,11 @@ html {
     height: auto;
   }
 }
+@media (max-width: 650px) {
+  .participants .participants__info .participants__bullet {
+    width: 100%;
+  }
+}
 /* accomodations */
 .padding_accomodations {
   background-color: #114917;
@@ -750,6 +821,10 @@ html {
   margin-top: 30px;
 }
 
+.accomodations .swiper2participants {
+  display: none;
+}
+
 @media (max-width: 1300px) {
   .accomodations .accomodations__bullets {
     width: 50%;
@@ -763,6 +838,7 @@ html {
     display: none;
   }
   .accomodations .swiper2participants {
+    display: block;
     width: 100%;
     height: 300px;
     margin-top: 50px;
@@ -938,6 +1014,16 @@ html {
   border-radius: 15px;
 }
 
+@media (max-width: 650px) {
+  .swiper-pagination-bullet.custom-bullet {
+    width: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .swiper-pagination-bullet.custom-bullet {
+    width: 35px;
+  }
+}
 /* partners */
 .partners {
   margin-top: 50px;
@@ -1104,4 +1190,27 @@ html {
 .footer .footer_socials a img {
   width: 40px;
   height: 40px;
+}
+
+@media (max-width: 650px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer__copyright, .footer .footer_socials, .footer .footer__logo {
+    width: 100%;
+  }
+  .footer .footer__logo {
+    margin-top: 30px;
+  }
+  .footer .footer__copyright {
+    text-align: center;
+  }
+  .footer .footer_socials {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .footer .footer_socials .firstLink {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=App.css.map */

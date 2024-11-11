@@ -1,14 +1,16 @@
-// src/LanguageSwitcher.js
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ onLanguageChange }) => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
 
   const toggleLanguage = () => {
     const newLanguage = currentLanguage === 'en' ? 'uk' : 'en';
     i18n.changeLanguage(newLanguage);
+    if (onLanguageChange) {
+      onLanguageChange(newLanguage); // Call the prop function to close the menu
+    }
   };
 
   return (

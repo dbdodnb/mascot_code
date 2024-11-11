@@ -45,6 +45,9 @@ function About() {
                             spaceBetween={10} 
                             breakpoints={{
                                 0: {
+                                    slidesPerView: 1
+                                },
+                                501: {
                                     slidesPerView: 2
                                 },
                                 751: {
@@ -61,25 +64,45 @@ function About() {
                                 disableOnInteraction: false
                             }}
                         >
-                            <SwiperSlide>
+                            <SwiperSlide style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'space-between'
+                            }}>
                                 <div className="about__element">
                                     <div></div>
                                     <p className="text text_underline">Lorem ipsum</p>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'space-between'
+                            }}>
                                 <div className="about__element">
                                     <div></div>
                                     <p className="text text_underline">Lorem ipsum</p>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'space-between'
+                            }}>
                                 <div className="about__element">
                                     <div></div>
                                     <p className="text text_underline">Lorem ipsum</p>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'space-between'
+                            }}>
                                 <div className="about__element">
                                     <div></div>
                                     <p className="text text_underline">Lorem ipsum</p>
@@ -87,7 +110,9 @@ function About() {
                             </SwiperSlide>
                         </Swiper>
                     ) : (
-                        <div className="about__cards">
+                        <div style={{
+                            width: '100%'
+                        }} className="about__cards">
                             <div className="about__element">
                                 <div></div>
                                 <p className="text text_underline">Lorem ipsum</p>

@@ -12,10 +12,15 @@ function Header() {
 
     const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang);
+        setIsMenuOpen(false); // Close the menu after language switch
     };
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
     };
 
     return (
@@ -26,13 +31,15 @@ function Header() {
                     ☰
                 </button>
                 <ul className={`navBurger__items ${isMenuOpen ? 'show' : ''}`}>
-                    <li><a className="nav__link text" href="#about">{t('about')}</a></li>
-                    <li><a className="nav__link text" href="#accommodations">{t('accomodations')}</a></li>
-                    <li><a className="nav__link text" href="#faq">{t('faq')}</a></li>
+                    <li><a className="nav__link text" href="#about" onClick={closeMenu}>{t('about')}</a></li>
+                    <li><a className="nav__link text" href="#accommodations" onClick={closeMenu}>{t('accomodations')}</a></li>
+                    <li><a className="nav__link text" href="#faq" onClick={closeMenu}>{t('faq')}</a></li>
                     <li style={{
                         fontFamily: '"Manrope", sans-serif'
-                    }}><LanguageSwitcher /></li>
-                    <li><a className="nav__button text" href="#">{t('support')}</a></li>
+                    }}>
+                      <LanguageSwitcher onLanguageChange={handleChangeLanguage} />
+                    </li>
+                    <li><a className="nav__button text" href="#" onClick={closeMenu}>{t('support')}</a></li>
                 </ul>
             </div>
 
@@ -41,9 +48,9 @@ function Header() {
                 <div className="nav__info">
                     <ul>
                         <li><a className="nav__link" href="#about">{t('about')}</a></li>
-                        <li><a className="nav__link" href="#accommodations">{t('accommodations')}</a></li>
+                        <li><a className="nav__link" href="#accommodations">{t('accomodations')}</a></li>
                         <li><a className="nav__link" href="#faq">{t('faq')}</a></li>
-                        <li><LanguageSwitcher /></li>
+                        <li><LanguageSwitcher onLanguageChange={handleChangeLanguage} /></li>
                         <li><a className="nav__button" href="#">{t('support')}</a></li>
                     </ul>
                 </div>

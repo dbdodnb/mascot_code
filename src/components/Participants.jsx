@@ -113,6 +113,9 @@ function Participants() {
                     onSwiper={setSwiperRef}
                     breakpoints={{
                         0: {
+                            slidesPerView: 1
+                        },
+                        651: {
                             slidesPerView: 2
                         },
                         951: {
