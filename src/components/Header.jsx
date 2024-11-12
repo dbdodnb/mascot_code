@@ -27,12 +27,12 @@ function Header() {
         <>
             <div className="navBurger">
                 <div className="navBurger__logo"></div>
-                <button className="burgerButton" onClick={toggleMenu}>
-                    ☰
-                </button>
+                <div className="burgerButton" onClick={toggleMenu}>
+                    <div>☰</div>
+                </div>
                 <ul className={`navBurger__items ${isMenuOpen ? 'show' : ''}`}>
                     <li><a className="nav__link text" href="#about" onClick={closeMenu}>{t('about')}</a></li>
-                    <li><a className="nav__link text" href="#accommodations" onClick={closeMenu}>{t('accomodations')}</a></li>
+                    <li><a className="nav__link text" href="#accomodations" onClick={closeMenu}>{t('accomodations')}</a></li>
                     <li><a className="nav__link text" href="#faq" onClick={closeMenu}>{t('faq')}</a></li>
                     <li style={{
                         fontFamily: '"Manrope", sans-serif'
@@ -48,7 +48,7 @@ function Header() {
                 <div className="nav__info">
                     <ul>
                         <li><a className="nav__link" href="#about">{t('about')}</a></li>
-                        <li><a className="nav__link" href="#accommodations">{t('accomodations')}</a></li>
+                        <li><a className="nav__link" href="#accomodations">{t('accomodations')}</a></li>
                         <li><a className="nav__link" href="#faq">{t('faq')}</a></li>
                         <li><LanguageSwitcher onLanguageChange={handleChangeLanguage} /></li>
                         <li><a className="nav__button" href="#">{t('support')}</a></li>

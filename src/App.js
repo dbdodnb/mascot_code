@@ -12,7 +12,8 @@ import Partners from './components/Partners';
 import Faq from './components/Faq';
 import Footer from './components/Footer';
 import { Helmet } from 'react-helmet';
-import metaPhoto from '../src/img/header/1.jpg'
+import metaPhoto from '../src/img/header/1.jpg';
+import ScrollToTop from 'react-scroll-to-top';
 
 function App() {
   return (
@@ -25,6 +26,36 @@ function App() {
         />
         <meta property="og:image" content={metaPhoto} />
       </Helmet>
+      <ScrollToTop
+        style={{
+          borderRadius: '50%',
+          boxShadow: 'none',
+          backgroundColor: '#73AF0E',
+          width: '50px',
+          height: '50px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        smooth
+        component={
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 15L12 9L18 15"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        }
+      />
       <Header />
       <MASCOT />
       <About />

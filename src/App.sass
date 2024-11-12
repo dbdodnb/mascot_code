@@ -314,12 +314,14 @@ html
     display: flex 
     justify-content: space-between 
     align-items: center 
-    position: sticky 
+    position: fixed 
     top: 0 
     z-index: 10000 
     background-color: $green 
     padding: 0 100px 
     box-sizing: border-box 
+    .burgerButton
+      justify-self: flex-end
     .navBurger__logo
       width: 90px
       height: 90px
@@ -332,10 +334,16 @@ html
       background: none 
       border: none 
       color: $white 
-      cursor: pointer 
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: flex-end 
+      text-align: right
+      width: 56px
+      height: 63px
     .navBurger__items 
       width: 100% 
-      height: calc( 100vh - 100px )
+      height: calc( 100dvh - 100px )
       display: none 
       flex-direction: column 
       justify-content: space-around 
@@ -364,14 +372,15 @@ html
     display: none
   .headerAdaptive
     width: 100%
-    height: calc( 100vh - 100px )
+    height: 100dvh
     background-color: $green
     box-sizing: border-box
     display: flex
     align-items: center
+    position: relative
     .headerAdaptive__info
       padding: 0 100px
-      height: 60%
+      height: auto
       z-index: 1000
       position: absolute
       display: flex
@@ -379,6 +388,7 @@ html
       justify-content: space-around
       .text
         color: $white
+        margin-top: 30px
       .heading
         color: $white
         font-size: 90px
@@ -401,6 +411,16 @@ html
     padding: 0 50px
   .headerAdaptive .headerAdaptive__info
     padding: 0 50px
+
+@media (max-width: 850px)
+  .navBurger
+    height: 70px
+    .navBurger__logo
+      width: 60px
+      height: 60px
+    .navBurger__items
+      height: calc( 100dvh - 70px )
+      top: 70px
 
 @media  (max-width: 755px)
   .headerAdaptive .headerAdaptive__info .heading
@@ -524,7 +544,7 @@ html
 
 /* values */
 .values
-  margin-top: 50px
+  margin-top: 80px
   width: 100%
   display: flex
   flex-wrap: wrap
@@ -550,6 +570,7 @@ html
       justify-content: space-around
       transition: .5s
       padding: 30px
+      cursor: pointer
       .values__info
         text-align: center
         display: none
@@ -574,6 +595,9 @@ html
       flex-direction: column
       justify-content: center
       align-items: center
+      padding: 20px
+      box-sizing: border-box
+      cursor: pointer
       .img
         border-radius: 25px
       .text
@@ -1019,19 +1043,55 @@ html
         width: 40px
         height: 40px
 
+.footerMobile
+  display: none
+
 @media (max-width: 650px)
   .footer
-    flex-direction: column 
+    display: none
+  .footerMobile
+    width: 100%
+    background-color: $brown
+    display: flex
+    justify-content: space-between
     align-items: center
-    .footer__copyright, .footer_socials, .footer__logo
-      width: 100%
+    margin-top: 50px
     .footer__logo
-      margin-top: 30px
-    .footer__copyright
-      text-align: center
-    .footer_socials
-      justify-content: center
-      margin-top: 30px
-      .firstLink
-        margin-left: 0
-      
+      width: 90px
+      height: 90px
+      background-image: url(../public/img/logo_bg.png)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+    .footer__info
+      width: calc( 100% - 120px )
+      padding: 30px 0
+      .footer__copyright
+        width: 100%
+        text-align: right
+      .footer_socials
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin-top: 30px
+        a 
+          display: block
+          width: 40px
+          height: 40px
+          margin-left: 20px
+          background-size: contain
+          background-position: center
+          background-repeat: no-repeat
+          &:nth-child(1n)
+            background-image: url(../public/img/logos/instagram.png)
+          &:nth-child(2n)
+            background-image: url(../public/img/logos/youtube.png)
+          &:nth-child(3n)
+            background-image: url(../public/img/logos/facebook.png)
+          &:nth-child(4n)
+            background-image: url(../public/img/logos/mail.png)
+          img
+            width: 40px
+            height: 40px
+          

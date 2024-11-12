@@ -338,12 +338,15 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10000;
     background-color: #114917;
     padding: 0 100px;
     box-sizing: border-box;
+  }
+  .navBurger .burgerButton {
+    justify-self: flex-end;
   }
   .navBurger .navBurger__logo {
     width: 90px;
@@ -359,10 +362,16 @@ html {
     border: none;
     color: #FFFFFF;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    width: 56px;
+    height: 63px;
   }
   .navBurger .navBurger__items {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100dvh - 100px);
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -397,15 +406,16 @@ html {
   }
   .headerAdaptive {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100dvh;
     background-color: #114917;
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    position: relative;
   }
   .headerAdaptive .headerAdaptive__info {
     padding: 0 100px;
-    height: 60%;
+    height: auto;
     z-index: 1000;
     position: absolute;
     display: flex;
@@ -414,6 +424,7 @@ html {
   }
   .headerAdaptive .headerAdaptive__info .text {
     color: #FFFFFF;
+    margin-top: 30px;
   }
   .headerAdaptive .headerAdaptive__info .heading {
     color: #FFFFFF;
@@ -441,6 +452,19 @@ html {
   }
   .headerAdaptive .headerAdaptive__info {
     padding: 0 50px;
+  }
+}
+@media (max-width: 850px) {
+  .navBurger {
+    height: 70px;
+  }
+  .navBurger .navBurger__logo {
+    width: 60px;
+    height: 60px;
+  }
+  .navBurger .navBurger__items {
+    height: calc(100dvh - 70px);
+    top: 70px;
   }
 }
 @media (max-width: 755px) {
@@ -586,7 +610,7 @@ html {
 }
 /* values */
 .values {
-  margin-top: 50px;
+  margin-top: 80px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -615,6 +639,7 @@ html {
   justify-content: space-around;
   transition: 0.5s;
   padding: 30px;
+  cursor: pointer;
 }
 .values .values__container div .values__info {
   text-align: center;
@@ -643,6 +668,9 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 .values .swiper .swiper-slide .value-block .img {
   border-radius: 25px;
@@ -1192,25 +1220,68 @@ html {
   height: 40px;
 }
 
+.footerMobile {
+  display: none;
+}
+
 @media (max-width: 650px) {
   .footer {
-    flex-direction: column;
-    align-items: center;
+    display: none;
   }
-  .footer .footer__copyright, .footer .footer_socials, .footer .footer__logo {
+  .footerMobile {
     width: 100%;
+    background-color: #6C4320;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
   }
-  .footer .footer__logo {
+  .footerMobile .footer__logo {
+    width: 90px;
+    height: 90px;
+    background-image: url(../public/img/logo_bg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .footerMobile .footer__info {
+    width: calc(100% - 120px);
+    padding: 30px 0;
+  }
+  .footerMobile .footer__info .footer__copyright {
+    width: 100%;
+    text-align: right;
+  }
+  .footerMobile .footer__info .footer_socials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     margin-top: 30px;
   }
-  .footer .footer__copyright {
-    text-align: center;
+  .footerMobile .footer__info .footer_socials a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  .footer .footer_socials {
-    justify-content: center;
-    margin-top: 30px;
+  .footerMobile .footer__info .footer_socials a:nth-child(1n) {
+    background-image: url(../public/img/logos/instagram.png);
   }
-  .footer .footer_socials .firstLink {
-    margin-left: 0;
+  .footerMobile .footer__info .footer_socials a:nth-child(2n) {
+    background-image: url(../public/img/logos/youtube.png);
+  }
+  .footerMobile .footer__info .footer_socials a:nth-child(3n) {
+    background-image: url(../public/img/logos/facebook.png);
+  }
+  .footerMobile .footer__info .footer_socials a:nth-child(4n) {
+    background-image: url(../public/img/logos/mail.png);
+  }
+  .footerMobile .footer__info .footer_socials a img {
+    width: 40px;
+    height: 40px;
   }
 }/*# sourceMappingURL=App.css.map */
