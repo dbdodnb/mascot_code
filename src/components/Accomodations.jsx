@@ -8,10 +8,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-creative';
 import { EffectCreative, Autoplay } from 'swiper/modules';
-import pic1 from '../img/bosko.jpg';
-import pic2 from '../img/bosko2.jpg';
-import pic3 from '../img/bosko3.webp';
-import pic4 from '../img/bosko4.jpg';
+import pic1 from '../img/bosko1.jpg'
+import pic2 from '../img/bosko2.jpg'
+import pic3 from '../img/bosko3.jpg'
+import pic4 from '../img/bosko4.jpg'
+import pic5 from '../img/bosko5.jpg'
+import pic6 from '../img/bosko6.jpg'
+import pic7 from '../img/bosko7.jpg'
+import pic8 from '../img/bosko8.jpg'
+import pic9 from '../img/bosko9.jpg'
+import pic10 from '../img/bosko10.webp'
+import pic11 from '../img/bosko11.webp'
+import pic12 from '../img/bosko12.png'
 import { useTranslation } from "react-i18next";
 
 function Accomodations() {
@@ -146,6 +154,94 @@ function Accomodations() {
                         height: '100%',
                         objectFit: 'cover'
                     }} src={pic4} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic5} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic6} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic7} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic8} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic9} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic10} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic11} alt="Participant 4" /></SwiperSlide>
+                    <SwiperSlide style={{
+                        background: '#114917',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '0px'
+                    }}><img style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }} src={pic12} alt="Participant 4" /></SwiperSlide>          
                 </Swiper>
                 <Swiper
                     modules={[Virtual, Navigation, Pagination, Autoplay]}
@@ -163,7 +259,7 @@ function Accomodations() {
                     virtual
                     className="swiper2participants"
                 >
-                    {[pic1, pic2, pic3, pic4].map((pic, index) => (
+                    {[pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12].map((pic, index) => (
                         <SwiperSlide key={index} virtualIndex={index}>
                             <img style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '25px' }} src={pic} alt={`Participant ${index + 1}`} />
                         </SwiperSlide>

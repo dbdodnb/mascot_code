@@ -37,7 +37,6 @@ function About() {
                 <div className="about__text">
                     <p className="section__heading">{t('about')}</p>
                     <p className="text">{t('about1')}</p>
-                    <p className="text">{t('about2')}</p>
                 </div>
                 <div className="about__cards">
                     {isMobile ? (
@@ -72,7 +71,7 @@ function About() {
                             }}>
                                 <div className="about__element">
                                     <div></div>
-                                    <p className="text text_underline">Lorem ipsum</p>
+                                    <p className="text text_underline">{t('aboutBullet1')}</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide style={{
@@ -83,7 +82,7 @@ function About() {
                             }}>
                                 <div className="about__element">
                                     <div></div>
-                                    <p className="text text_underline">Lorem ipsum</p>
+                                    <p className="text text_underline">{t('aboutBullet2')}</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide style={{
@@ -94,7 +93,7 @@ function About() {
                             }}>
                                 <div className="about__element">
                                     <div></div>
-                                    <p className="text text_underline">Lorem ipsum</p>
+                                    <p className="text text_underline">{t('aboutBullet3')}</p>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide style={{
@@ -105,7 +104,7 @@ function About() {
                             }}>
                                 <div className="about__element">
                                     <div></div>
-                                    <p className="text text_underline">Lorem ipsum</p>
+                                    <p className="text text_underline">{t('aboutBullet4')}</p>
                                 </div>
                             </SwiperSlide>
                         </Swiper>
@@ -115,19 +114,19 @@ function About() {
                         }} className="about__cards">
                             <div className="about__element">
                                 <div></div>
-                                <p className="text text_underline">Lorem ipsum</p>
+                                <p className="text text_underline">{t('aboutBullet1')}</p>
                             </div>
                             <div className="about__element">
                                 <div></div>
-                                <p className="text text_underline">Lorem ipsum</p>
+                                <p className="text text_underline">{t('aboutBullet2')}</p>
                             </div>
                             <div className="about__element">
                                 <div></div>
-                                <p className="text text_underline">Lorem ipsum</p>
+                                <p className="text text_underline">{t('aboutBullet3')}</p>
                             </div>
                             <div className="about__element">
                                 <div></div>
-                                <p className="text text_underline">Lorem ipsum</p>
+                                <p className="text text_underline">{t('aboutBullet4')}</p>
                             </div>
                         </div>
                     )}
