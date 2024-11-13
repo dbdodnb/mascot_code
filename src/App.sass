@@ -34,9 +34,15 @@ table
     
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap')
 
+@font-face 
+  font-family: "UnitySans"
+  src: local("UnitySans"), url('fonts/UnitySans-Basic.otf')
+
+
+
 /* variables */
 
-$font: "Manrope", sans-serif
+$font: "UnitySans"
 $green: #114917
 $light-green: #73AF0E
 $pink: #FB6EA7
@@ -54,7 +60,7 @@ $dark-orange: #CE7B02
   font-family: $font
   font-size: 24px
   line-height: 1.5
-  font-weight: 600
+  font-weight: 500
 
 .text_underline
   text-decoration: underline
@@ -64,7 +70,7 @@ $dark-orange: #CE7B02
   color: $green
   font-size: 64px
   font-family: $font
-  font-weight: 800
+  font-weight: 700
 
 html
   scroll-behavior: smooth
@@ -130,7 +136,7 @@ html
                   color: $white
                   text-decoration: none
                   font-size: 24px
-                  font-weight: 600
+                  font-weight: 500
 
 .language-toggle
   width: 75px
@@ -458,6 +464,11 @@ html
       display: inline-block
       animation: marquee 20s linear infinite
       margin-right: 40px
+      z-index: 10000
+      padding: 5px 0
+      box-sizing: border-box
+      &::selection
+        background: none
 
 @keyframes marquee
   0%
