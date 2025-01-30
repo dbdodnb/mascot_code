@@ -31,6 +31,7 @@ function Values() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    
     const blocks = [
         { title: t('respect'), info: t('respectDef'), image: respect },
         { title: t('inclusivity'), info: t('inclusivityDef'), image: inclusivity },

@@ -39,7 +39,7 @@ function Header() {
                     }}>
                       <LanguageSwitcher onLanguageChange={handleChangeLanguage} />
                     </li>
-                    <li><a className="nav__button text" href="#" onClick={closeMenu}>{t('support')}</a></li>
+                    <li><a target="_blank" className="nav__button text" href="https://gofund.me/ed6bb508" onClick={closeMenu}>{t('support')}</a></li>
                 </ul>
             </div>
 
@@ -51,7 +51,7 @@ function Header() {
                         <li><a className="nav__link" href="#accomodations">{t('accomodations')}</a></li>
                         <li><a className="nav__link" href="#faq">{t('faq')}</a></li>
                         <li><LanguageSwitcher onLanguageChange={handleChangeLanguage} /></li>
-                        <li><a className="nav__button" href="#">{t('support')}</a></li>
+                        <li><a target="_blank" className="nav__button" href="https://gofund.me/ed6bb508">{t('support')}</a></li>
                     </ul>
                 </div>
             </div>
