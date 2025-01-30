@@ -538,44 +538,61 @@ html {
   justify-content: space-between;
 }
 .about .about__text {
-  width: 45%;
+  width: 60%;
 }
 .about .about__text .text {
   margin-top: 50px;
 }
 .about .about__cards {
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  grid-row-gap: 20px;
 }
 .about .about__cards .about__element {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 .about .about__cards .about__element div {
-  width: 165px;
-  height: 165px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: #73AF0E;
 }
-.about .about__cards .about__element a {
+.about .about__cards .about__element p {
   color: #000;
+  width: 100%;
+  position: relative;
+  top: -35px;
+  left: 35px;
+}
+.about .about__cards .about__element:nth-child(2n) {
+  margin-left: 150px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1150px) {
   .about .about__text {
     width: 100%;
   }
   .about .about__cards {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .about .about__cards .about__element:nth-child(2n) {
+    margin-left: 0;
+  }
+  .about .about__cards .about__element {
+    width: 25%;
+  }
+}
+@media (max-width: 860px) {
+  .about .about__cards .about__element {
+    width: 50%;
   }
 }
 @media (max-width: 850px) {
@@ -602,10 +619,16 @@ html {
     height: 100%;
     color: #000;
   }
+  .about .about__cards .swiper .swiper-slide .about__element div {
+    width: 100px;
+    height: 100px;
+  }
   .about .about__cards .swiper .swiper-slide .about__element .text {
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    top: 0;
+    left: 0;
   }
   .swiper-pagination-bullet {
     width: 40px;
