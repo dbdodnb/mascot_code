@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 import sasha from '../img/team/Sasha_Sui.png';
 import nystia from '../img/team/Anastasiia_Khomenko.png';
 import alex from '../img/team/Oleksandr_Marchyshak.png';
-import illia from '../img/team/Illia_Chaikovskyi.png';
+// import illia from '../img/team/Illia_Chaikovskyi.png';
 import yulia from '../img/team/Yuliia_Buhera.png';
 import { useTranslation } from "react-i18next";
 
@@ -40,19 +40,19 @@ function Team() {
       },
       {
         name: t('alex'),
-        role: "Partnership Manager",
+        role: "Location Manager",
         photo: alex,
       },
       {
         name: t('yulia'),
-        role: "Location Manager",
+        role: "Partnership Manager",
         photo: yulia,
       },
-      {
-        name: t('illia'),
-        role: "Finance Manager",
-        photo: illia,
-      },
+      // {
+      //   name: t('illia'),
+      //   role: "Finance Manager",
+      //   photo: illia,
+      // },
     ]);
   }, [t, i18n.language]); // Depend on `t` and `i18n.language` for updates
 
